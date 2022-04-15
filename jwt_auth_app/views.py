@@ -91,10 +91,18 @@ class UserList(APIView):
 class UserRetriveUpdateDelete(APIView):
 
     def get(self, request, pk):
+
         user = self.get_user(pk=pk)
         serialized_user = UserSerializer(user)
 
         return Response(data=serialized_user.data, status=status.HTTP_200_OK)
+
+    def delete(self, request, pk):
+
+        user_to_delete = self.get_user(pk=pk)
+        user_to_delete.delete()
+
+        return Response(status=status.HTTP_204_NO_CONTENT)
 
     # Helper method to get user by id
     def get_user(self, pk):
