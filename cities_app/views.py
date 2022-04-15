@@ -24,7 +24,8 @@ class ScrapeSearch(APIView):
         search_fields = request.data
 
         if not all(x in search_fields.keys() for x in ('city', 'country')):
-            return Response(data="Request body needs to have 'city' and 'country' fields.", status=status.HTTP_400_BAD_REQUEST)
+            return Response(data="Request body needs to have 'city' and 'country' fields.",
+                            status=status.HTTP_400_BAD_REQUEST)
 
         city_urls = search_lonely_planet(
             city_name=search_fields['city'], country_name=search_fields['country']
@@ -65,6 +66,8 @@ class CityListCreate(APIView):
 
         if not city_serializer.is_valid():
             return Response(data=city_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+        # NO ELSE NEEDED IF YOU RETURN IN THE IF CLAUSE ABOVE...
         else:
             city_serializer.save()
             return Response(data=city_serializer.data, status=status.HTTP_200_OK)

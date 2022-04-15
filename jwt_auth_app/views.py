@@ -3,7 +3,7 @@ from rest_framework import status
 from rest_framework.permissions import IsAuthenticated, IsAdminUser
 from rest_framework.views import APIView
 from rest_framework.response import Response
-from rest_framework.exceptions import PermissionDenied
+from rest_framework.exceptions import PermissionDenied, NotFound
 from django.contrib.auth import get_user_model
 from django.conf import settings
 import jwt
@@ -86,3 +86,19 @@ class UserList(APIView):
         # Serialize all users (many=True) to JSON
         serialized_users = UserSerializer(users, many=True)
         return Response(data=serialized_users.data, status=status.HTTP_200_OK)
+
+
+class UserRetriveUpdateDelete(APIView):
+
+    def get(self, request, pk):
+        user = self.get_user(pk=pk)
+        serialized_user = UserSerializer(user)
+
+        return Response(data=serialized_user.data, status=status.HTTP_200_OK)
+
+    # Helper method to get user by id
+    def get_user(self, pk):
+        try:
+            return User.objects.get(pk=pk)
+        except User.DoesNotExist():
+            raise NotFound(detail='User does not exists')
