@@ -18,7 +18,7 @@ class ScrapeSearch(APIView):
             The POST request parameters will be used to 
             search Lonely Planet and return the results matching the search country and city. 
 
-            Handles the POST `cities/scrape/` request.
+            Handles the POST `scrape/search/` request.
         """
 
         search_fields = request.data
@@ -70,13 +70,42 @@ class CityListCreate(APIView):
             return Response(data=city_serializer.data, status=status.HTTP_200_OK)
 
 
-class CityDetail(APIView):
-    """ Get city by id (pk). """
+class CityRetrieveUpdateDelete(APIView):
+    """ View that handles GET, PUT and DEL `cities/<int:pk>/` request.
+            ONLY ADMINs can run the PUT and DEL requests!
+    """
 
-    def get(self, request, pk):
+    def fetch_city(self, pk):
+        """ Helper function to fetch city by id through a try-catch 
+            block. 
+        """
         try:
-            city = City.objects.get(pk=pk)
-            serialized_city = CitySerializer(city)
-            return Response(data=serialized_city.data, status=status.HTTP_200_OK)
+            return City.objects.get(pk=pk)
         except City.DoesNotExist:
             raise NotFound(detail="City id not found")
+
+    def get(self, request, pk):
+        """ Get city by id (pk). """
+        city = self.fetch_city(pk=pk)
+        serialized_city = CitySerializer(city)
+        return Response(data=serialized_city.data, status=status.HTTP_200_OK)
+
+    def put(self, request, pk):
+        """ Update city by id. 
+            ADMIN ONLY. 
+        """
+        city_to_update = self.fetch_city(pk=pk)
+        updated_city = CitySerializer(city_to_update, data=request.data)
+        if not updated_city.is_valid():
+            return Response(data=updated_city.errors, status=status.HTTP_400_BAD_REQUEST)
+        else:
+            updated_city.save()
+            return Response(updated_city.data, status=status.HTTP_202_ACCEPTED)
+
+    def delete(self, request, pk):
+        """ Delete city by id. 
+            ADMIN ONLY. 
+        """
+        city_to_delete = self.fetch_city(pk=pk)
+        city_to_delete.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
