@@ -1,13 +1,12 @@
-from ast import If
 from datetime import datetime, timedelta
-import email
-import jwt
-from rest_framework.permissions import IsAuthenticated
+from rest_framework import status
+from rest_framework.permissions import IsAuthenticated, IsAdminUser
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework.exceptions import PermissionDenied
 from django.contrib.auth import get_user_model
 from django.conf import settings
+import jwt
 
 from .serializers import UserSerializer
 
@@ -68,3 +67,22 @@ class CredentialsView(APIView):
         serializer = UserSerializer(request.user)
 
         return Response(serializer.data)
+
+
+# END OF AUTH VIEWS
+
+
+class UserList(APIView):
+
+    # Restricts the view to Admins only
+    permission_classes = [IsAdminUser, ]
+
+    # List users
+    def get(self, request):
+
+        # Load all users from the db
+        users = User.objects.all()
+
+        # Serialize all users (many=True) to JSON
+        serialized_users = UserSerializer(users, many=True)
+        return Response(data=serialized_users.data, status=status.HTTP_200_OK)
