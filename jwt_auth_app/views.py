@@ -97,6 +97,19 @@ class UserRetriveUpdateDelete(APIView):
 
         return Response(data=serialized_user.data, status=status.HTTP_200_OK)
 
+    def put(self, request, pk):
+
+        user_to_update = User.objects.get(pk=pk)
+
+        updated_user = UserSerializer(user_to_update, data=request.data)
+
+        if not updated_user.is_valid():
+            return Response(data=updated_user.errors, status=status.HTTP_400_BAD_REQUEST)
+
+        updated_user.save()
+
+        return Response(updated_user.data, status=status.HTTP_200_OK)
+
     def delete(self, request, pk):
 
         user_to_delete = self.get_user(pk=pk)
