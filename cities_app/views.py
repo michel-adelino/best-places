@@ -140,7 +140,7 @@ class SearchCity(APIView):
         description = City.objects.filter(
             description__unaccent__icontains=search_term)
         top_3_attractions = City.objects.filter(
-            top_3_attractions__unaccent__icontains=search_term)
+            top_3_attractions__icontains=search_term)
 
         results = set(list(chain(
             cities, countries, state, continent, description, top_3_attractions
