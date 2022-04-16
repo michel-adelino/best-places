@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.postgres',  # supports search on accented chars
     'corsheaders',
     'rest_framework',
     'jwt_auth_app',
