@@ -1,6 +1,7 @@
 from itertools import chain
 from django.shortcuts import render
 from django.db import connection
+from unidecode import unidecode
 from rest_framework import status
 from rest_framework.response import Response
 from rest_framework.generics import ListAPIView
@@ -128,12 +129,16 @@ class SearchCity(APIView):
     def get(self, request, search_term):
         """ GET 'cities/<str:search_term>/' request. """
 
+        # search_term = unidecode(search_term)
         # cities = City.objects.get(city__icontains=search_term)  # `get` returns JUST ONE (error if more). so use `filter`` instead
-        cities = City.objects.filter(city__icontains=search_term)
-        countries = City.objects.filter(country__icontains=search_term)
-        state = City.objects.filter(state__icontains=search_term)
-        continent = City.objects.filter(continent__icontains=search_term)
-        description = City.objects.filter(description__icontains=search_term)
+        cities = City.objects.filter(city__unaccent__icontains=search_term)
+        countries = City.objects.filter(
+            country__unaccent__icontains=search_term)
+        state = City.objects.filter(state__unaccent__icontains=search_term)
+        continent = City.objects.filter(
+            continent__unaccent__icontains=search_term)
+        description = City.objects.filter(
+            description__unaccent__icontains=search_term)
         top_3_attractions = City.objects.filter(
             top_3_attractions__icontains=search_term)
 
