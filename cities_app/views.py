@@ -1,4 +1,6 @@
+from itertools import chain
 from django.shortcuts import render
+from django.db import connection
 from rest_framework import status
 from rest_framework.response import Response
 from rest_framework.generics import ListAPIView
@@ -112,3 +114,35 @@ class CityRetrieveUpdateDelete(APIView):
         city_to_delete = self.fetch_city(pk=pk)
         city_to_delete.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
+
+
+class SearchCity(APIView):
+    """ Searches through all cities by endpoint parameter:
+        - city
+        - country
+        - state
+        - continent
+        - top 3 attractions
+    """
+
+    def get(self, request, search_term):
+        """ GET 'cities/<str:search_term>/' request. """
+
+        # cities = City.objects.get(city__icontains=search_term)  # `get` returns JUST ONE (error if more). so use `filter`` instead
+        cities = City.objects.filter(city__icontains=search_term)
+        countries = City.objects.filter(country__icontains=search_term)
+        state = City.objects.filter(state__icontains=search_term)
+        continent = City.objects.filter(continent__icontains=search_term)
+        description = City.objects.filter(description__icontains=search_term)
+        top_3_attractions = City.objects.filter(
+            top_3_attractions__icontains=search_term)
+
+        results = set(list(chain(
+            cities, countries, state, continent, description, top_3_attractions
+        )))
+
+        if not results:
+            return Response(data="No results matching the search term.", status=status.HTTP_202_ACCEPTED)
+        else:
+            serialized_results = CitySerializer(results, many=True)
+            return Response(data=serialized_results.data, status=status.HTTP_202_ACCEPTED)
