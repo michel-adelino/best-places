@@ -141,8 +141,5 @@ class SearchCity(APIView):
             cities, countries, state, continent, description, top_3_attractions
         )))
 
-        if not results:
-            return Response(data="No results matching the search term.", status=status.HTTP_202_ACCEPTED)
-        else:
-            serialized_results = CitySerializer(results, many=True)
-            return Response(data=serialized_results.data, status=status.HTTP_202_ACCEPTED)
+        serialized_results = CitySerializer(results, many=True)
+        return Response(data=serialized_results.data, status=status.HTTP_202_ACCEPTED)
