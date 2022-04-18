@@ -6,6 +6,9 @@ import django.contrib.auth.password_validation as validation
 from django.contrib.auth.hashers import make_password
 from django.core.exceptions import ValidationError
 
+# from cities_app.serializers import CitySerializer
+from reviews_app.serializer import ReviewSerializer
+
 User = get_user_model()
 
 
@@ -34,3 +37,9 @@ class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
         fields = ('__all__')
+
+
+class UserWithCitiesSelializer(UserSerializer):
+
+    # cities = CitySerializer(many=True)
+    reviews = ReviewSerializer(many=True)
