@@ -34,10 +34,24 @@ class ScrapeSearch(APIView):
             city_name=search_fields['city'], country_name=search_fields['country']
         )
 
-        if not city_urls:
-            return Response(data="No results", status=status.HTTP_400_BAD_REQUEST)
-
         return Response(data=city_urls, status=status.HTTP_200_OK)
+
+
+class ScrapeCityUrls(APIView):
+    """ This method will scrape all the URLs that were returned
+        by the scraper when the user searched a city-country 
+        combination. 
+    """
+
+    def post(self, request):
+        """ This is the POST `'scrape/cities/'` endpoint. """
+
+        city_urls = request.data['urls']
+        city_object = scrape_cities(city_urls)
+
+        serialized_cities = CitySerializer(city_object, many=True)
+
+        return Response(data=serialized_cities.data, status=status.HTTP_200_OK)
 
 
 class CityListCreate(APIView):
@@ -51,29 +65,21 @@ class CityListCreate(APIView):
 
     def post(self, request):
         """ Create a city that doesn't yet exist in our database.
-            This is the city that the user selected, which is the
-            request parameter = the VALID url string (that was returned from ScrapeSearch).
+            This is the city that the user selected (that was 
+            returned from ScrapeSearch).
 
-            This method will:
-            1) first scrape the valid city url provided
-            2) then add the scraped results to the DB
+            This method will add the scraped results to the DB.
         """
 
-        if not (request.data or 'url' in request.data):
-            return Response(data="", status=status.HTTP_400_BAD_REQUEST)
+        city = request.data
 
-        city_url = request.data['url']
-        city_object = scrape_cities(urls=[city_url])[0]
-
-        city_serializer = CitySerializer(data=city_object)
+        city_serializer = CitySerializer(data=city)
 
         if not city_serializer.is_valid():
             return Response(data=city_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
-        # NO ELSE NEEDED IF YOU RETURN IN THE IF CLAUSE ABOVE...
-        else:
-            city_serializer.save()
-            return Response(data=city_serializer.data, status=status.HTTP_200_OK)
+        city_serializer.save()
+        return Response(data=city_serializer.data, status=status.HTTP_200_OK)
 
 
 class CityRetrieveUpdateDelete(APIView):
