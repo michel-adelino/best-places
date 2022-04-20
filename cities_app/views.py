@@ -77,6 +77,8 @@ class CityListCreate(APIView):
 
         if not city_serializer.is_valid():
             return Response(data=city_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+        elif City.objects.filter(city__unaccent__icontains=city['city']):
+            return Response(data="City already exists", status=status.HTTP_400_BAD_REQUEST)
 
         city_serializer.save()
         return Response(data=city_serializer.data, status=status.HTTP_200_OK)
