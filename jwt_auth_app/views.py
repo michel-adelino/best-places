@@ -8,7 +8,7 @@ from django.contrib.auth import get_user_model
 from django.conf import settings
 import jwt
 
-from .serializers import UserSerializer
+from .serializers import UserSerializer, UserWithCitiesSelializer
 
 User = get_user_model()
 
@@ -75,7 +75,7 @@ class CredentialsView(APIView):
 class UserList(APIView):
 
     # Restricts the view to Admins only
-    permission_classes = [IsAdminUser, ]
+    # permission_classes = [IsAdminUser, ]
 
     # List users
     def get(self, request):
@@ -88,14 +88,16 @@ class UserList(APIView):
         return Response(data=serialized_users.data, status=status.HTTP_200_OK)
 
 
-class UserRetriveUpdateDelete(APIView):
-
+class UserRetrieve(APIView):
     def get(self, request, pk):
 
-        user = self.get_user(pk=pk)
-        serialized_user = UserSerializer(user)
+        user = User.objects.get(pk=pk)
+        serialized_user = UserWithCitiesSelializer(user)
 
         return Response(data=serialized_user.data, status=status.HTTP_200_OK)
+
+
+class UserUpdateDelete(APIView):
 
     def put(self, request, pk):
 

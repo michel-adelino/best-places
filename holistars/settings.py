@@ -53,6 +53,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'jwt_auth_app',
     'cities_app',
+    'reviews_app',
 ]
 
 MIDDLEWARE = [
