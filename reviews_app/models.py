@@ -11,12 +11,17 @@ User = get_user_model()
 class Review(models.Model):
 
     text = models.TextField(max_length=500)
-    user = models.ForeignKey(User, related_name='reviews', on_delete=models.SET_NULL, null=True)
-    city = models.ForeignKey(City, related_name='reviews', on_delete=models.CASCADE)
+    user = models.ForeignKey(User, related_name='reviews',
+                             on_delete=models.SET_NULL, null=True)
+    city = models.ForeignKey(
+        City, related_name='reviews', on_delete=models.CASCADE)
     created_date = models.DateField(auto_now=True)
-    rating_food = models.PositiveIntegerField(default=1, validators=[MinValueValidator(1), MaxValueValidator(5)])
-    rating_weather = models.PositiveIntegerField(default=1, validators=[MinValueValidator(1), MaxValueValidator(5)])
-    rating_culture = models.PositiveIntegerField(default=1, validators=[MinValueValidator(1), MaxValueValidator(5)])
+    rating_food = models.PositiveIntegerField(
+        default=1, validators=[MinValueValidator(1), MaxValueValidator(5)])
+    rating_weather = models.PositiveIntegerField(
+        default=1, validators=[MinValueValidator(1), MaxValueValidator(5)])
+    rating_culture = models.PositiveIntegerField(
+        default=1, validators=[MinValueValidator(1), MaxValueValidator(5)])
 
     @property
     def avg_rating(self):

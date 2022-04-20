@@ -2,7 +2,7 @@ from urllib import response
 from django.shortcuts import render
 from rest_framework.views import APIView, Response
 from rest_framework import status
-from .serializer import ReviewSerializer
+from .serializers import ReviewSerializer
 from rest_framework.permissions import IsAuthenticated
 
 # Create your views here.

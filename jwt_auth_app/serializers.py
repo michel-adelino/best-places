@@ -7,7 +7,7 @@ from django.contrib.auth.hashers import make_password
 from django.core.exceptions import ValidationError
 
 # from cities_app.serializers import CitySerializer
-from reviews_app.serializer import ReviewSerializer
+from reviews_app.serializers import ReviewSerializer
 
 User = get_user_model()
 
