@@ -9,7 +9,6 @@ class City(models.Model):
     continent = models.CharField(max_length=50)
     description = models.TextField()
     top_3_attractions = ArrayField(models.CharField(max_length=50))
-    # image = models.ImageField(max_length=250)
     image = models.TextField()  # some very long image URLs
 
     def __str__(self):
