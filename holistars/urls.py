@@ -20,5 +20,6 @@ urlpatterns = [
     path('api/admin/', admin.site.urls),
     path('api/authentication/', include('jwt_auth_app.urls')),
     path('api/', include('cities_app.urls')),
-    path('api/review/', include('reviews_app.urls'))
+    path('api/review/', include('reviews_app.urls')),
+    path('api/holidays/', include('holidays_app.urls'))
 ]

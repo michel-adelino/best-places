@@ -8,11 +8,9 @@ from django.contrib.auth import get_user_model
 from django.conf import settings
 import jwt
 
-from .serializers import UserSerializer, UserWithCitiesSelializer
+from .serializers import UserSerializer, UserWithCitiesSerializer, PopulatedUserSelializer
 
 User = get_user_model()
-
-# Create your views here.
 
 
 class RegisterView(APIView):
@@ -84,7 +82,8 @@ class UserList(APIView):
         users = User.objects.all()
 
         # Serialize all users (many=True) to JSON
-        serialized_users = UserSerializer(users, many=True)
+        # serialized_users = UserSerializer(users, many=True)
+        serialized_users = PopulatedUserSelializer(users, many=True)
         return Response(data=serialized_users.data, status=status.HTTP_200_OK)
 
 
@@ -92,7 +91,7 @@ class UserRetrieve(APIView):
     def get(self, request, pk):
 
         user = User.objects.get(pk=pk)
-        serialized_user = UserWithCitiesSelializer(user)
+        serialized_user = UserWithCitiesSerializer(user)
 
         return Response(data=serialized_user.data, status=status.HTTP_200_OK)
 
