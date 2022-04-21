@@ -5,8 +5,6 @@ from rest_framework import status
 from .serializers import ReviewSerializer
 from rest_framework.permissions import IsAuthenticated
 
-# Create your views here.
-
 
 class ReviewCreate(APIView):
 

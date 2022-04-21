@@ -5,8 +5,6 @@ from cities_app.models import City
 
 User = get_user_model()
 
-# Create your models here.
-
 
 class Review(models.Model):
 
