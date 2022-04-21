@@ -5,6 +5,7 @@ from django.contrib.auth import get_user_model
 import django.contrib.auth.password_validation as validation
 from django.contrib.auth.hashers import make_password
 from django.core.exceptions import ValidationError
+from followers_app.serializers import FollowerSerializer, FollowersOnlySerializer, FollowingsOnlySerializer
 from holidays_app.serializers import HolidaySerializer
 
 # from cities_app.serializers import CitySerializer
@@ -48,5 +49,6 @@ class UserWithCitiesSerializer(UserSerializer):
 
 
 class PopulatedUserSelializer(UserSerializer):
-    # holidays = HolidaySerializer(many=True)
     holidays = HolidaySerializer(many=True)
+    followers = FollowersOnlySerializer(many=True)
+    followings = FollowingsOnlySerializer(many=True)

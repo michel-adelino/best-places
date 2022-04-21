@@ -9,9 +9,9 @@ class Follower(models.Model):
             - user = the person being followed (target)
             - follower = the user following the user
     """
-    user = models.ForeignKey(User, related_name='folowee',
+    user = models.ForeignKey(User, related_name='followers',
                              on_delete=models.SET_NULL, null=True)
-    follower = models.ForeignKey(User, related_name='follower',
+    follower = models.ForeignKey(User, related_name='followings',
                                  on_delete=models.SET_NULL, null=True)
 
     def __str__(self):
