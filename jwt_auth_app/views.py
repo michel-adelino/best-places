@@ -91,7 +91,8 @@ class UserRetrieve(APIView):
     def get(self, request, pk):
 
         user = User.objects.get(pk=pk)
-        serialized_user = UserWithCitiesSerializer(user)
+        # serialized_user = UserWithCitiesSerializer(user)
+        serialized_user = PopulatedUserSelializer(user)
 
         return Response(data=serialized_user.data, status=status.HTTP_200_OK)
 
