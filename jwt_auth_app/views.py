@@ -82,7 +82,6 @@ class UserList(APIView):
         users = User.objects.all()
 
         # Serialize all users (many=True) to JSON
-        # serialized_users = UserSerializer(users, many=True)
         serialized_users = PopulatedUserSelializer(users, many=True)
         return Response(data=serialized_users.data, status=status.HTTP_200_OK)
 
