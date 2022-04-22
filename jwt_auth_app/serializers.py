@@ -50,5 +50,6 @@ class UserWithCitiesSerializer(UserSerializer):
 
 class PopulatedUserSelializer(UserSerializer):
     holidays = HolidaySerializer(many=True)
+    reviews = ReviewSerializer(many=True)
     followers = FollowersOnlySerializer(many=True)
     followings = FollowingsOnlySerializer(many=True)
