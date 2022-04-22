@@ -8,7 +8,7 @@ from rest_framework.generics import ListAPIView
 from rest_framework.views import APIView
 from rest_framework.exceptions import NotFound
 from .models import City
-from .serializers import CitySerializer
+from .serializers import CitySerializer, PopulatedCitySerializer
 from scrape_searches import search_lonely_planet
 from scrape_cities import scrape_cities
 import sys
@@ -44,7 +44,8 @@ class ScrapeCityUrls(APIView):
     """
 
     def post(self, request):
-        """ This is the POST `'scrape/cities/'` endpoint. """
+        """ This is the POST `'scrape/cities/'` endpoint that scrapes
+            citiy urls given by the json body. """
 
         city_urls = request.data['urls']
         city_object = scrape_cities(city_urls)
@@ -60,7 +61,8 @@ class CityListCreate(APIView):
     def get(self, request):
         """ Get all cities. """
         cities = City.objects.all()
-        serialized_cities = CitySerializer(cities, many=True)
+        # serialized_cities = CitySerializer(cities, many=True)
+        serialized_cities = PopulatedCitySerializer(cities, many=True)
         return Response(data=serialized_cities.data, status=status.HTTP_200_OK)
 
     def post(self, request):
@@ -138,7 +140,7 @@ class SearchCity(APIView):
         """ GET 'cities/<str:search_term>/' request. """
 
         # search_term = unidecode(search_term)
-        # cities = City.objects.get(city__icontains=search_term)  # `get` returns JUST ONE (error if more). so use `filter`` instead
+        # cities = City.objects.get(city__icontains=search_term)  # `get` returns JUST ONE (error if more). so use `filter` instead
         cities = City.objects.filter(city__unaccent__icontains=search_term)
         countries = City.objects.filter(
             country__unaccent__icontains=search_term)
