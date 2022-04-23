@@ -8,7 +8,7 @@ from django.contrib.auth import get_user_model
 from django.conf import settings
 import jwt
 
-from .serializers import UserSerializer, UserWithCitiesSerializer, PopulatedUserSelializer
+from .serializers import UserSerializer, PopulatedUserSelializer
 
 User = get_user_model()
 
@@ -36,6 +36,7 @@ class LoginView(APIView):
 
         try:
             user = User.objects.get(email=email)
+            serializer = UserSerializer(user)
         except User.DoesNotExist:
             raise PermissionDenied({'message': 'Invalid credentials'})
 
@@ -53,7 +54,10 @@ class LoginView(APIView):
             algorithm='HS256',
         )
 
-        return Response({'token': token, 'message': f'So you\'re back {user.username}...'})
+        return Response(
+            {'token': token, 'message': f'So you\'re back {user.username}...', 'user': serializer.data['username'],
+             'id': serializer.data['id'],
+             'image': serializer.data['image']})
 
 
 class CredentialsView(APIView):
