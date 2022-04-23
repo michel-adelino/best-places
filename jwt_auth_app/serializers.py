@@ -8,7 +8,7 @@ from django.core.exceptions import ValidationError
 from followers_app.serializers import FollowerSerializer, FollowersOnlySerializer, FollowingsOnlySerializer
 from holidays_app.serializers import HolidaySerializer
 
-# from cities_app.serializers import CitySerializer
+from cities_app.serializers import CitySerializer
 from reviews_app.serializers import ReviewSerializer
 
 User = get_user_model()
@@ -42,8 +42,6 @@ class UserSerializer(serializers.ModelSerializer):
 
 
 class UserWithCitiesSerializer(UserSerializer):
-
-    # cities = CitySerializer(many=True)
     holidays = HolidaySerializer(many=True)
     reviews = ReviewSerializer(many=True)
 
