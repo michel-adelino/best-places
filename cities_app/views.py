@@ -103,7 +103,7 @@ class CityRetrieveUpdateDelete(APIView):
     def get(self, request, pk):
         """ Get city by id (pk). """
         city = self.fetch_city(pk=pk)
-        serialized_city = CitySerializer(city)
+        serialized_city = PopulatedCitySerializer(city)
         return Response(data=serialized_city.data, status=status.HTTP_200_OK)
 
     def put(self, request, pk):
