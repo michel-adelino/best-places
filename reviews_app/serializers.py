@@ -8,4 +8,5 @@ class ReviewSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Review
-        fields = ('__all__')
+        fields = ('text', 'user', 'city', 'created_date', 'rating_food',
+                  'rating_culture', 'rating_weather', 'avg_rating')
