@@ -1,0 +1,200 @@
+[
+  {
+    "model":"jwt_auth_app.holiuser",
+    "pk":1,
+    "fields":{
+        "username":"theadmin",
+        "first_name": "Admin",
+        "email":"admin@admin.com",
+        "password":"pbkdf2_sha256$320000$o5G2zBD8XkU3lrRScxvzes$d39WyLK3YYlMhi1cAvlCWYvWolrkon1n28zvJb2m2TQ=",
+        "is_superuser": true,
+        "is_staff": true,
+        "image":"https://images.unsplash.com/photo-1572112686652-3b8957ffc299?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8aGVhZHNob3QlMjBzdW5nbGFzc2VzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60",
+        "bio":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat tempora necessitatibus ducimus impedit aliquid maxime odit nostrum. Voluptate delectus inventore magnam. Consectetur, velit. Consequuntur nemo excepturi distinctio maiores vero minima!"
+    }
+  },
+  {
+    "model":"jwt_auth_app.holiuser",
+    "pk":2,
+    "fields":{
+        "username":"Milo",
+        "first_name": "Milo",
+        "last_name": "Smithe",
+        "email":"milo@gmail.com",
+        "password":"pbkdf2_sha256$320000$o5G2zBD8XkU3lrRScxvzes$d39WyLK3YYlMhi1cAvlCWYvWolrkon1n28zvJb2m2TQ=",
+        "image":"https://images.unsplash.com/photo-1464402875330-e917e36c26dc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8c2lsaG91ZXR0ZSUyMG1hbGV8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60",
+        "bio":"Be curious. Get lost. Find yourself. #exploretheglobe"
+    }
+  },
+  {
+    "model":"jwt_auth_app.holiuser",
+    "pk":3,
+    "fields":{
+        "username":"Garry",
+        "first_name": "Garry",
+        "last_name": "Badosa",
+        "email":"garry@gmail.com",
+        "password":"pbkdf2_sha256$320000$o5G2zBD8XkU3lrRScxvzes$d39WyLK3YYlMhi1cAvlCWYvWolrkon1n28zvJb2m2TQ=",
+        "image":"https://images.unsplash.com/photo-1519168814926-902c571e7124?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8c2lsaG91ZXR0ZSUyMG1hbGV8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60",
+        "bio":"Travelling is one of the biggest parts of my life, and I’m always sharing things I learn along the way. 🌏"
+    }
+  },
+  {
+    "model":"jwt_auth_app.holiuser",
+    "pk":4,
+    "fields":{
+        "username":"Tristan",
+        "first_name": "Tristan",
+        "last_name": "Fields",
+        "email":"tristan@gmail.com",
+        "password":"pbkdf2_sha256$320000$o5G2zBD8XkU3lrRScxvzes$d39WyLK3YYlMhi1cAvlCWYvWolrkon1n28zvJb2m2TQ=",
+        "image":"https://images.unsplash.com/photo-1499209974431-9dddcece7f88?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8c2lsaG91ZXR0ZSUyMG1hbGV8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60",
+        "bio":"❤️ Travel, adventure, wanderlust."
+    }
+  },
+  {
+    "model":"jwt_auth_app.holiuser",
+    "pk":5,
+    "fields":{
+        "username":"Nick",
+        "first_name": "Nicholas",
+        "last_name": "Monski",
+        "email":"nick@gmail.com",
+        "password":"pbkdf2_sha256$320000$o5G2zBD8XkU3lrRScxvzes$d39WyLK3YYlMhi1cAvlCWYvWolrkon1n28zvJb2m2TQ=",
+        "image":"https://images.unsplash.com/photo-1460795744360-274bcc74ec40?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8c2lsaG91ZXR0ZSUyMG1hbGV8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60",
+        "bio":"Explore different places through your iPhone lens 📷 🌍 #iphoneonly"
+    }
+  },
+  {
+    "model":"jwt_auth_app.holiuser",
+    "pk":6,
+    "fields":{
+        "username":"Ed",
+        "first_name": "Edward",
+        "last_name": "Federer",
+        "email":"ed@gmail.com",
+        "password":"pbkdf2_sha256$320000$o5G2zBD8XkU3lrRScxvzes$d39WyLK3YYlMhi1cAvlCWYvWolrkon1n28zvJb2m2TQ=",
+        "image":"https://images.unsplash.com/photo-1465321897912-c692b37a09a6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fHNpbGhvdWV0dGUlMjBtYWxlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60",
+        "bio":"Making the most of every moment, every day. 🌎☀️🚣♥"
+    }
+  },
+  {
+    "model":"jwt_auth_app.holiuser",
+    "pk":7,
+    "fields":{
+        "username":"Calum",
+        "first_name": "Calum",
+        "last_name": "Chiaen",
+        "email":"calum@gmail.com",
+        "password":"pbkdf2_sha256$320000$o5G2zBD8XkU3lrRScxvzes$d39WyLK3YYlMhi1cAvlCWYvWolrkon1n28zvJb2m2TQ=",
+        "image":"https://images.unsplash.com/photo-1436128003323-97dab5d267a9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8c2lsaG91ZXR0ZSUyMG1hbGV8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60",
+        "bio":"Exploring is my therapy, tell me yours 😎🌍"
+    }
+  },
+  {
+    "model":"jwt_auth_app.holiuser",
+    "pk":8,
+    "fields":{
+        "username":"Matt",
+        "first_name": "Matthew",
+        "last_name": "Cristunda",
+        "email":"matt@gmail.com",
+        "password":"pbkdf2_sha256$320000$o5G2zBD8XkU3lrRScxvzes$d39WyLK3YYlMhi1cAvlCWYvWolrkon1n28zvJb2m2TQ=",
+        "image":"https://images.unsplash.com/photo-1496912819863-5055eb23c282?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fHNpbGhvdWV0dGUlMjBtYWxlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60",
+        "bio":"Once you’ve done the pyramids in Egypt, it’s hard to come back to a mere beach 😎"
+    }
+  },
+  {
+    "model":"jwt_auth_app.holiuser",
+    "pk":9,
+    "fields":{
+        "username":"Jack",
+        "first_name": "Jack",
+        "last_name": "Delvy",
+        "email":"jack@gmail.com",
+        "password":"pbkdf2_sha256$320000$o5G2zBD8XkU3lrRScxvzes$d39WyLK3YYlMhi1cAvlCWYvWolrkon1n28zvJb2m2TQ=",
+        "image":"https://images.unsplash.com/photo-1517774247280-f0d65bda942d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fHNpbGhvdWV0dGUlMjBtYWxlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60",
+        "bio":"The world is a book and those who do not travel read only one page."
+    }
+  },
+  {
+    "model":"jwt_auth_app.holiuser",
+    "pk":10,
+    "fields":{
+        "username":"Ana",
+        "first_name": "Ana",
+        "last_name": "Bello",
+        "email":"ana@gmail.com",
+        "password":"pbkdf2_sha256$320000$o5G2zBD8XkU3lrRScxvzes$d39WyLK3YYlMhi1cAvlCWYvWolrkon1n28zvJb2m2TQ=",
+        "image":"https://images.unsplash.com/photo-1581197326868-51cafbd1a169?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fHNpbGhvdWV0dGV8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60",
+        "bio":"World-traveling nomad. Female. Book nerds, Peanuts fan girl. Constant appreciator of life’s little details, tea addict, day-dreamer extraordinaire, chocolate enthusiast. Traveller, wanderer, ramb"
+    }
+  },
+  {
+    "model":"jwt_auth_app.holiuser",
+    "pk":11,
+    "fields":{
+        "username":"Tatiana",
+        "first_name": "Tatiana",
+        "last_name": "Swon",
+        "email":"tatiana@gmail.com",
+        "password":"pbkdf2_sha256$320000$o5G2zBD8XkU3lrRScxvzes$d39WyLK3YYlMhi1cAvlCWYvWolrkon1n28zvJb2m2TQ=",
+        "image":"https://images.unsplash.com/photo-1508153460964-48ffffcb0829?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8c2lsaG91ZXR0ZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60",
+        "bio":" Follow along on our travel adventures as we capture the most beautiful beaches, mountains, and cities on Earth."
+    }
+  },
+  {
+    "model":"jwt_auth_app.holiuser",
+    "pk":12,
+    "fields":{
+        "username":"Dani",
+        "first_name": "Danielle",
+        "last_name": "Linah",
+        "email":"dani@gmail.com",
+        "password":"pbkdf2_sha256$320000$o5G2zBD8XkU3lrRScxvzes$d39WyLK3YYlMhi1cAvlCWYvWolrkon1n28zvJb2m2TQ=",
+        "image":"https://images.unsplash.com/photo-1483884105135-c06ea81a7a80?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8c2lsaG91ZXR0ZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60",
+        "bio":"Moving across the world really does change your perspective."
+    }
+  },
+  {
+    "model":"jwt_auth_app.holiuser",
+    "pk":12,
+    "fields":{
+        "username":"marco",
+        "first_name": "Marco",
+        "last_name": "Benois",
+        "email":"marco@gmail.com",
+        "password":"pbkdf2_sha256$320000$o5G2zBD8XkU3lrRScxvzes$d39WyLK3YYlMhi1cAvlCWYvWolrkon1n28zvJb2m2TQ=",
+        "is_superuser":true,
+        "is_staff":true,
+        "image":"https://images.unsplash.com/photo-1471293082634-905c2f92dea8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjN8fHNpbGhvdWV0dGUlMjBtYWxlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60",
+        "bio":"All you need is love and a dog, and a little bit of money 💵"
+    }
+  },
+  {
+    "model":"jwt_auth_app.holiuser",
+    "pk":13,
+    "fields":{
+        "username":"Simon",
+        "first_name": "Simon",
+        "last_name": "Seyes",
+        "email":"simon@gmail.com",
+        "password":"pbkdf2_sha256$320000$o5G2zBD8XkU3lrRScxvzes$d39WyLK3YYlMhi1cAvlCWYvWolrkon1n28zvJb2m2TQ=",
+        "image":"https://images.unsplash.com/photo-1471293082634-905c2f92dea8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjN8fHNpbGhvdWV0dGUlMjBtYWxlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60",
+        "bio":"Some places are meant to be seen, some to be felt, but most to be remembered."
+    }
+  },
+  {
+    "model":"jwt_auth_app.holiuser",
+    "pk":13,
+    "fields":{
+        "username":"Suzi",
+        "first_name": "Suzanna",
+        "last_name": "de Riojas",
+        "email":"suzanna@gmail.com",
+        "password":"pbkdf2_sha256$320000$o5G2zBD8XkU3lrRScxvzes$d39WyLK3YYlMhi1cAvlCWYvWolrkon1n28zvJb2m2TQ=",
+        "image":"https://images.unsplash.com/photo-1500904156668-758cff89dcff?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fHNpbGhvdWV0dGV8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60",
+        "bio":"All roads lead to an adventure. (and some roads are worth taking more than once)"
+    }
+  }
+]
