@@ -3,10 +3,8 @@ from django.contrib.auth import get_user_model
 import django.contrib.auth.password_validation as validation
 from django.contrib.auth.hashers import make_password
 from django.core.exceptions import ValidationError
-from followers_app.serializers import FollowerSerializer, FollowersOnlySerializer, FollowingsOnlySerializer
+from followers_app.serializers import FollowersOnlySerializer, FollowingsOnlySerializer
 from holidays_app.serializers import HolidaySerializer
-
-from cities_app.serializers import CitySerializer
 from reviews_app.serializers import ReviewSerializer
 
 User = get_user_model()
