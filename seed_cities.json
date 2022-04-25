@@ -404,110 +404,6 @@
 },
 {
   "model": "cities_app.city",
-  "pk": 49,
-  "fields": {
-    "city": "Nerja",
-    "country": "Spain",
-    "state": "Andalucía",
-    "continent": "Europe",
-    "description": "Nerja, 56km east of Málaga with the Sierra Almijara rising behind it, has succeeded in rebuffing developers, allowing its centre to retain a low-rise village charm despite the proliferation of souvenir shops and the large number of visitors it sees. At its heart is the perennially beautiful Balcón de Europa, a palm-lined promontory built on the foundations of an old fort that offers panoramic views of the cobalt-blue sea flanked by honey-coloured coves.",
-    "top_3_attractions": "[\"Cueva de Nerja\", \"Balc\\u00f3n de Europa\", \"Playa Burriana\"]",
-    "image": "https://images.unsplash.com/photo-1619460941702-0c73da36fe59?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1688&q=80"
-  }
-},
-{
-  "model": "cities_app.city",
-  "pk": 50,
-  "fields": {
-    "city": "San Sebastián",
-    "country": "Spain",
-    "state": "Basque Country",
-    "continent": "Europe",
-    "description": "Framed by golden beaches and lush hillsides, San Sebastián has undeniable allure, from its venerable dining scene to its grand architecture and packed cultural calendar.",
-    "top_3_attractions": "[\"Kursaal\", \"San Telmo Museoa\", \"Playa de la Concha\"]",
-    "image": "https://lp-cms-production.imgix.net/2019-06/469923b6458f7cafa11a2daa564b3c3b1f6b18a3d81b4175535048b094b767dd.jpg?sharp=10&vib=20&w=1200&auto=compress&fit=crop&fm=auto&h=800"
-  }
-},
-{
-  "model": "cities_app.city",
-  "pk": 51,
-  "fields": {
-    "city": "Bologna",
-    "country": "Italy",
-    "state": "",
-    "continent": "Europe",
-    "description": "Fusing haughty elegance with down-to-earth grit in one beautifully colonnaded medieval grid, Bologna is a city of two intriguing halves. One side is a hard-working, high-tech city located in the super-rich Po valley where suave opera-goers waltz out of regal theatres and into some of the nation's finest restaurants. The other is a bolshie, politically edgy city that hosts the world's oldest university and is famous for its graffiti-embellished piazzas filled with mildly inebriated students swapping Gothic fashion tips.",
-    "top_3_attractions": "[\"Basilica di Santo Stefano\", \"Basilica di San Petronio\", \"Torre degli Asinelli\"]",
-    "image": "https://lp-cms-production.imgix.net/2019-06/e6e58704bf8b6f1412d6afb9fd219a95d08ac28371cee01eb1dc5d97cfed63c1.jpg?sharp=10&vib=20&w=1200&auto=compress&fit=crop&fm=auto&h=800"
-  }
-},
-{
-  "model": "cities_app.city",
-  "pk": 52,
-  "fields": {
-    "city": "Bern",
-    "country": "Switzerland",
-    "state": "",
-    "continent": "Europe",
-    "description": "Wandering through the picture-postcard, Unesco World Heritage–listed Old Town, with its provincial, laid-back air, it's hard to believe that Bern (Berne in French) is the capital of Switzerland.",
-    "top_3_attractions": "[\"Zentrum Paul Klee\", \"Berner Altstadt\", \"M\\u00fcnster\"]",
-    "image": "https://lp-cms-production.imgix.net/2019-06/49422286.jpg?sharp=10&vib=20&w=1200&auto=compress&fit=crop&fm=auto&h=800"
-  }
-},
-{
-  "model": "cities_app.city",
-  "pk": 53,
-  "fields": {
-    "city": "Ko Lanta",
-    "country": "Thailand",
-    "state": "",
-    "continent": "Asia",
-    "description": "Once the domain of sea gypsies, Lanta has morphed from a luscious Thai backwater into a getaway for both Asian and European, especially Scandinavian, visitors who come for the divine miles-long beaches (though the northern coast is alarmingly eroded) and nearby dive spots of Hin Daeng, Hin Muang and Ko Haa.",
-    "top_3_attractions": "[\"Mu Ko Lanta National Park\", \"Ban Si Raya\", \"Tham Khao Maikaeo\"]",
-    "image": "https://lp-cms-production.imgix.net/2019-06/dc986659f31ad6013f924ca6075c29ed56a28049699e98b9736e9c1338061e71.jpg?sharp=10&vib=20&w=1200&auto=compress&fit=crop&fm=auto&h=800"
-  }
-},
-{
-  "model": "cities_app.city",
-  "pk": 54,
-  "fields": {
-    "city": "Calgary",
-    "country": "Canada",
-    "state": "",
-    "continent": "North America",
-    "description": "Calgary will surprise you with its beauty, cool eateries, nightlife beyond honky-tonk, and long, worthwhile to-do list. Calgarians aren’t known for their modesty; it’s their self-love and can-do attitude that got them through disastrous flooding in 2013 and, in 2016, saw them helping residents of wildfire-stricken Fort McMurray with unquestioning generosity. We mustn’t forget – Calgary also hosted the highly successful 1988 Winter Olympics, elected North America’s first Muslim mayor, and throws one of Canada’s biggest festivals, the Calgary Stampede.",
-    "top_3_attractions": "[\"National Music Centre\", \"Calgary Zoo\", \"Heritage Park Historical Village\"]",
-    "image": "https://lp-cms-production.imgix.net/2019-06/e484fc3558c688910a9780fca776aab7-calgary-stampede.jpg?sharp=10&vib=20&w=1200&auto=compress&fit=crop&fm=auto&h=800"
-  }
-},
-{
-  "model": "cities_app.city",
-  "pk": 55,
-  "fields": {
-    "city": "Split",
-    "country": "Croatia",
-    "state": "",
-    "continent": "Europe",
-    "description": "Croatia's second-largest city, Split (Spalato in Italian) is a great place to see Dalmatian life as it’s really lived. Always buzzing, this exuberant city has just the right balance between tradition and modernity. Step inside Diocletian’s Palace (a Unesco World Heritage Site and one of the world’s most impressive Roman monuments) and you’ll see dozens of bars, restaurants and shops thriving amid the atmospheric old walls where Split has been humming along for thousands of years.",
-    "top_3_attractions": "[\"Diocletian\\u2019s Palace\", \"Klis Fortress\", \"Cathedral of St Domnius\"]",
-    "image": "https://lp-cms-production.imgix.net/2019-06/747dac6b25d738f43ba13f0f62f8fa43-gregorius-of-nin.jpg?sharp=10&vib=20&w=1200&auto=compress&fit=crop&fm=auto&h=800"
-  }
-},
-{
-  "model": "cities_app.city",
-  "pk": 56,
-  "fields": {
-    "city": "Copenhagen",
-    "country": "Denmark",
-    "state": "",
-    "continent": "Europe",
-    "description": "Copenhagen is the epitome of Scandi cool. Modernist lamps light New Nordic tables, bridges buzz with cycling commuters and eye-candy locals dive into pristine waterways.",
-    "top_3_attractions": "[\"Tivoli Gardens\", \"Christiania\", \"Rosenborg Slot\"]",
-    "image": "https://lp-cms-production.imgix.net/2019-06/GettyImages-511571849_super.jpg?sharp=10&vib=20&w=1200&auto=compress&fit=crop&fm=auto&h=800"
-  }
-},
-{
-  "model": "cities_app.city",
   "pk": 57,
   "fields": {
     "city": "Cabo Pulmo",
@@ -517,19 +413,6 @@
     "description": "Cabo Pulmo, a tiny village and a 17,571-acre Marine Protected Area (MPA), is one of the most successful national marine parks in the world and arguably offers the best diving and snorkeling in Baja. It's also home to the only Pacific coral reef in the Sea of Cortez. You don't need a 4WD to enjoy the drive out here along the spectacular Eastern Cape (from the south) coastal road or through the Sierra de la Laguna (to the west), although the road can get rough at times. You will escape the crowds and find a very mellow scene that can be hard to leave.",
     "top_3_attractions": "[\"Palapa Cabo Pulmo\", \"El Caballero\"]",
     "image": "https://lp-cms-production.imgix.net/2019-06/GettyImages-550007291_super.jpg?sharp=10&vib=20&w=1200&auto=compress&fit=crop&fm=auto&h=800"
-  }
-},
-{
-  "model": "cities_app.city",
-  "pk": 58,
-  "fields": {
-    "city": "Sevilla Province",
-    "country": "Spain",
-    "state": "Andalucía",
-    "continent": "Europe",
-    "description": "From Moorish palaces and Roman ruins to sun-baked plains and bosky river valleys, Sevilla province boasts some of Andalucía’s greatest hits and least-known treasures. At its heart is the region’s charismatic capital, Seville. A gregarious, flamboyant city famed for its artistic and architectural riches, flamenco clubs and teeming tapas bars, this heady riverside metropolis provides a fabulous introduction to the region. But if you can break its spell you’ll discover there’s plenty to admire in the surrounding province.",
-    "top_3_attractions": "[\"Real Alc\\u00e1zar\", \"Catedral & Giralda\", \"Museo de Bellas Artes\"]",
-    "image": "https://cms.lonelyplanet.com/?sharp=10&vib=20&w=1200&auto=compress&fit=crop&fm=auto&h=800"
   }
 }
 ]
