@@ -4,9 +4,9 @@
   "pk": 1,
   "fields": {
     "text": "Fantastic!!!!!!",
-    "user": 1,
+    "user": 3,
     "city": 9,
-    "created_date": "2022-04-20",
+    "created_date": "2022-04-25",
     "rating_food": 3,
     "rating_weather": 5,
     "rating_culture": 4
@@ -19,7 +19,7 @@
     "text": "So amazing!!!!!",
     "user": 1,
     "city": 7,
-    "created_date": "2022-04-20",
+    "created_date": "2022-04-25",
     "rating_food": 4,
     "rating_weather": 2,
     "rating_culture": 4
@@ -30,9 +30,9 @@
   "pk": 3,
   "fields": {
     "text": "A wonderful visit every season!",
-    "user": 3,
+    "user": 13,
     "city": 12,
-    "created_date": "2022-04-23",
+    "created_date": "2022-04-25",
     "rating_food": 4,
     "rating_weather": 2,
     "rating_culture": 5
@@ -45,7 +45,7 @@
     "text": "Love the kebabs!!!!!!",
     "user": 4,
     "city": 12,
-    "created_date": "2022-04-23",
+    "created_date": "2022-04-25",
     "rating_food": 5,
     "rating_weather": 5,
     "rating_culture": 4
@@ -56,9 +56,9 @@
   "pk": 5,
   "fields": {
     "text": "Too cold for my liking",
-    "user": 13,
+    "user": 1,
     "city": 12,
-    "created_date": "2022-04-24",
+    "created_date": "2022-04-25",
     "rating_food": 5,
     "rating_weather": 1,
     "rating_culture": 4
@@ -82,11 +82,349 @@
   "pk": 8,
   "fields": {
     "text": "Meh, so-so. But hey - worth a visit for those who haven't been!",
-    "user": 1,
+    "user": 3,
     "city": 12,
     "created_date": "2022-04-25",
     "rating_food": 3,
     "rating_weather": 2,
+    "rating_culture": 4
+  }
+},
+{
+  "model": "reviews_app.review",
+  "pk": 9,
+  "fields": {
+    "text": "Very underrated city - beautiful, historic, and cultural. Beach could be cleaner though.",
+    "user": 9,
+    "city": 2,
+    "created_date": "2022-04-25",
+    "rating_food": 5,
+    "rating_weather": 5,
+    "rating_culture": 5
+  }
+},
+{
+  "model": "reviews_app.review",
+  "pk": 10,
+  "fields": {
+    "text": "Too touristy, but nice beaches minus the people. Don't get the hype.",
+    "user": 8,
+    "city": 3,
+    "created_date": "2022-04-25",
+    "rating_food": 4,
+    "rating_weather": 3,
+    "rating_culture": 2
+  }
+},
+{
+  "model": "reviews_app.review",
+  "pk": 11,
+  "fields": {
+    "text": "Love this place!! The tiramisu is to die for, and the duomo is simply breath-taking. A rating of 5 would be perfection which is impossible though.",
+    "user": 7,
+    "city": 4,
+    "created_date": "2022-04-25",
+    "rating_food": 4,
+    "rating_weather": 2,
+    "rating_culture": 4
+  }
+},
+{
+  "model": "reviews_app.review",
+  "pk": 12,
+  "fields": {
+    "text": "Incredible place. Bustling with wonderful nature (in the city!!) - very civilised and clean.",
+    "user": 14,
+    "city": 5,
+    "created_date": "2022-04-25",
+    "rating_food": 2,
+    "rating_weather": 3,
+    "rating_culture": 4
+  }
+},
+{
+  "model": "reviews_app.review",
+  "pk": 13,
+  "fields": {
+    "text": "A little overrated. Was hoping for the beach. Lovely people though. Food so-so",
+    "user": 2,
+    "city": 18,
+    "created_date": "2022-04-25",
+    "rating_food": 2,
+    "rating_weather": 2,
+    "rating_culture": 3
+  }
+},
+{
+  "model": "reviews_app.review",
+  "pk": 14,
+  "fields": {
+    "text": "Great city, though insanely crowded. Great doughnuts and meat skewers",
+    "user": 3,
+    "city": 6,
+    "created_date": "2022-04-25",
+    "rating_food": 5,
+    "rating_weather": 2,
+    "rating_culture": 4
+  }
+},
+{
+  "model": "reviews_app.review",
+  "pk": 15,
+  "fields": {
+    "text": "Pretty great. Insanely expensive, but love the vibe.",
+    "user": 5,
+    "city": 8,
+    "created_date": "2022-04-25",
+    "rating_food": 4,
+    "rating_weather": 3,
+    "rating_culture": 3
+  }
+},
+{
+  "model": "reviews_app.review",
+  "pk": 19,
+  "fields": {
+    "text": "nah",
+    "user": 3,
+    "city": 10,
+    "created_date": "2022-04-25",
+    "rating_food": 1,
+    "rating_weather": 1,
+    "rating_culture": 1
+  }
+},
+{
+  "model": "reviews_app.review",
+  "pk": 20,
+  "fields": {
+    "text": "You just have to be there to understand.",
+    "user": 6,
+    "city": 24,
+    "created_date": "2022-04-25",
+    "rating_food": 5,
+    "rating_weather": 5,
+    "rating_culture": 5
+  }
+},
+{
+  "model": "reviews_app.review",
+  "pk": 21,
+  "fields": {
+    "text": "Sure it's great, but pretty crowded. I wanted to put my castellano to use but it was mostly catalan (which of course is fine)...",
+    "user": 6,
+    "city": 13,
+    "created_date": "2022-04-25",
+    "rating_food": 4,
+    "rating_weather": 3,
+    "rating_culture": 1
+  }
+},
+{
+  "model": "reviews_app.review",
+  "pk": 22,
+  "fields": {
+    "text": "Wonderful! Great restaurants, people, scenery - the whole package.",
+    "user": 6,
+    "city": 25,
+    "created_date": "2022-04-25",
+    "rating_food": 3,
+    "rating_weather": 4,
+    "rating_culture": 5
+  }
+},
+{
+  "model": "reviews_app.review",
+  "pk": 23,
+  "fields": {
+    "text": "Terrific. Although not as many hamburgers as I would've liked to find.......",
+    "user": 13,
+    "city": 11,
+    "created_date": "2022-04-25",
+    "rating_food": 1,
+    "rating_weather": 4,
+    "rating_culture": 4
+  }
+},
+{
+  "model": "reviews_app.review",
+  "pk": 24,
+  "fields": {
+    "text": "I could live here!!! Didn't see Leo DiCaprio though (so I'm rating the culture a 1) But i saw a shark! Love the weather and food.",
+    "user": 10,
+    "city": 14,
+    "created_date": "2022-04-25",
+    "rating_food": 5,
+    "rating_weather": 5,
+    "rating_culture": 1
+  }
+},
+{
+  "model": "reviews_app.review",
+  "pk": 25,
+  "fields": {
+    "text": "If you stay around the cute hidden spots away from the main streets it's soooo lovely! Great restaurants and people, super safe too!",
+    "user": 10,
+    "city": 27,
+    "created_date": "2022-04-25",
+    "rating_food": 5,
+    "rating_weather": 4,
+    "rating_culture": 3
+  }
+},
+{
+  "model": "reviews_app.review",
+  "pk": 26,
+  "fields": {
+    "text": "Perfect getaway around May. If you stay away from the German and English zones, it's wonderfully peaceful, beautiful and relaxing.",
+    "user": 10,
+    "city": 15,
+    "created_date": "2022-04-25",
+    "rating_food": 4,
+    "rating_weather": 4,
+    "rating_culture": 3
+  }
+},
+{
+  "model": "reviews_app.review",
+  "pk": 27,
+  "fields": {
+    "text": "Perfect time to go (June) just before the summer craze. Clubs are still open, and you get all the serene calas that aren't packed with touists!!! Wasn't as warm as expected though.",
+    "user": 12,
+    "city": 16,
+    "created_date": "2022-04-25",
+    "rating_food": 5,
+    "rating_weather": 2,
+    "rating_culture": 5
+  }
+},
+{
+  "model": "reviews_app.review",
+  "pk": 28,
+  "fields": {
+    "text": "Amazing people and sights. Don't get the hype about the food though personally. Really safe, would recommend everyone go!",
+    "user": 12,
+    "city": 19,
+    "created_date": "2022-04-25",
+    "rating_food": 1,
+    "rating_weather": 4,
+    "rating_culture": 5
+  }
+},
+{
+  "model": "reviews_app.review",
+  "pk": 29,
+  "fields": {
+    "text": "2 days would've been enough IMO. Not a fan.",
+    "user": 12,
+    "city": 21,
+    "created_date": "2022-04-25",
+    "rating_food": 1,
+    "rating_weather": 1,
+    "rating_culture": 1
+  }
+},
+{
+  "model": "reviews_app.review",
+  "pk": 30,
+  "fields": {
+    "text": "THE. BEST. PLACE. ON. EARTH",
+    "user": 15,
+    "city": 22,
+    "created_date": "2022-04-25",
+    "rating_food": 5,
+    "rating_weather": 5,
+    "rating_culture": 5
+  }
+},
+{
+  "model": "reviews_app.review",
+  "pk": 31,
+  "fields": {
+    "text": "Very underrated. If you go before the party season you get to appreciate the cute pedestrian-only streets - a gem!!!",
+    "user": 15,
+    "city": 26,
+    "created_date": "2022-04-25",
+    "rating_food": 4,
+    "rating_weather": 4,
+    "rating_culture": 3
+  }
+},
+{
+  "model": "reviews_app.review",
+  "pk": 32,
+  "fields": {
+    "text": "So great!! Great food, loved the colosseum and pizza!",
+    "user": 15,
+    "city": 29,
+    "created_date": "2022-04-25",
+    "rating_food": 5,
+    "rating_weather": 3,
+    "rating_culture": 4
+  }
+},
+{
+  "model": "reviews_app.review",
+  "pk": 33,
+  "fields": {
+    "text": "Sooo cold, but nice. Also super rainy.",
+    "user": 11,
+    "city": 20,
+    "created_date": "2022-04-25",
+    "rating_food": 2,
+    "rating_weather": 1,
+    "rating_culture": 4
+  }
+},
+{
+  "model": "reviews_app.review",
+  "pk": 34,
+  "fields": {
+    "text": "Brilliant holiday. Will definitely go again - great weather and beaches.",
+    "user": 11,
+    "city": 23,
+    "created_date": "2022-04-25",
+    "rating_food": 3,
+    "rating_weather": 5,
+    "rating_culture": 4
+  }
+},
+{
+  "model": "reviews_app.review",
+  "pk": 35,
+  "fields": {
+    "text": "A little overrated actually... The pictures showed more blue domes than there were.. super crowded and touisty.",
+    "user": 11,
+    "city": 28,
+    "created_date": "2022-04-25",
+    "rating_food": 3,
+    "rating_weather": 4,
+    "rating_culture": 2
+  }
+},
+{
+  "model": "reviews_app.review",
+  "pk": 36,
+  "fields": {
+    "text": "Just a short business trip but SO WORTH IT. Beautiful duomo, and they have a magnum cafe!!!",
+    "user": 11,
+    "city": 30,
+    "created_date": "2022-04-25",
+    "rating_food": 5,
+    "rating_weather": 4,
+    "rating_culture": 5
+  }
+},
+{
+  "model": "reviews_app.review",
+  "pk": 37,
+  "fields": {
+    "text": "Absolutely wonderful!!",
+    "user": 7,
+    "city": 17,
+    "created_date": "2022-04-25",
+    "rating_food": 3,
+    "rating_weather": 4,
     "rating_culture": 4
   }
 }

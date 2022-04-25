@@ -62,5 +62,13 @@
     "user": 3,
     "follower": 1
   }
+},
+{
+  "model": "followers_app.follower",
+  "pk": 12,
+  "fields": {
+    "user": 2,
+    "follower": 7
+  }
 }
 ]

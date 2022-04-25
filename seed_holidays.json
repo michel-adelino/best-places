@@ -118,5 +118,275 @@
     "date": "07/2019",
     "duration": "1 month"
   }
+},
+{
+  "model": "holidays_app.holiday",
+  "pk": 14,
+  "fields": {
+    "user": 10,
+    "city": 27,
+    "date": "07/2018",
+    "duration": "5 days"
+  }
+},
+{
+  "model": "holidays_app.holiday",
+  "pk": 15,
+  "fields": {
+    "user": 10,
+    "city": 14,
+    "date": "11/2019",
+    "duration": "6 days"
+  }
+},
+{
+  "model": "holidays_app.holiday",
+  "pk": 16,
+  "fields": {
+    "user": 10,
+    "city": 55,
+    "date": "06/2019",
+    "duration": "3 days"
+  }
+},
+{
+  "model": "holidays_app.holiday",
+  "pk": 17,
+  "fields": {
+    "user": 6,
+    "city": 24,
+    "date": "01/2022",
+    "duration": "2 weeks"
+  }
+},
+{
+  "model": "holidays_app.holiday",
+  "pk": 18,
+  "fields": {
+    "user": 6,
+    "city": 25,
+    "date": "09/2014",
+    "duration": "9 days"
+  }
+},
+{
+  "model": "holidays_app.holiday",
+  "pk": 19,
+  "fields": {
+    "user": 11,
+    "city": 52,
+    "date": "04/2022",
+    "duration": "2 days"
+  }
+},
+{
+  "model": "holidays_app.holiday",
+  "pk": 20,
+  "fields": {
+    "user": 11,
+    "city": 56,
+    "date": "08/2020",
+    "duration": "6 days"
+  }
+},
+{
+  "model": "holidays_app.holiday",
+  "pk": 21,
+  "fields": {
+    "user": 6,
+    "city": 13,
+    "date": "05/2022",
+    "duration": "1 week"
+  }
+},
+{
+  "model": "holidays_app.holiday",
+  "pk": 22,
+  "fields": {
+    "user": 13,
+    "city": 12,
+    "date": "01/2021",
+    "duration": "1 week"
+  }
+},
+{
+  "model": "holidays_app.holiday",
+  "pk": 23,
+  "fields": {
+    "user": 14,
+    "city": 57,
+    "date": "06/2018",
+    "duration": "1 month"
+  }
+},
+{
+  "model": "holidays_app.holiday",
+  "pk": 24,
+  "fields": {
+    "user": 9,
+    "city": 2,
+    "date": "07/2021",
+    "duration": "4 days"
+  }
+},
+{
+  "model": "holidays_app.holiday",
+  "pk": 25,
+  "fields": {
+    "user": 8,
+    "city": 3,
+    "date": "04/2020",
+    "duration": "10 days"
+  }
+},
+{
+  "model": "holidays_app.holiday",
+  "pk": 26,
+  "fields": {
+    "user": 7,
+    "city": 4,
+    "date": "06/2017",
+    "duration": "2 days"
+  }
+},
+{
+  "model": "holidays_app.holiday",
+  "pk": 27,
+  "fields": {
+    "user": 14,
+    "city": 5,
+    "date": "07/2014",
+    "duration": "2 months"
+  }
+},
+{
+  "model": "holidays_app.holiday",
+  "pk": 28,
+  "fields": {
+    "user": 13,
+    "city": 11,
+    "date": "10/2018",
+    "duration": "5 days"
+  }
+},
+{
+  "model": "holidays_app.holiday",
+  "pk": 29,
+  "fields": {
+    "user": 10,
+    "city": 15,
+    "date": "05/2016",
+    "duration": "8 days"
+  }
+},
+{
+  "model": "holidays_app.holiday",
+  "pk": 30,
+  "fields": {
+    "user": 12,
+    "city": 16,
+    "date": "06/2016",
+    "duration": "5 days"
+  }
+},
+{
+  "model": "holidays_app.holiday",
+  "pk": 31,
+  "fields": {
+    "user": 12,
+    "city": 19,
+    "date": "09/2017",
+    "duration": "3 weeks"
+  }
+},
+{
+  "model": "holidays_app.holiday",
+  "pk": 32,
+  "fields": {
+    "user": 12,
+    "city": 21,
+    "date": "03/2022",
+    "duration": "4 days"
+  }
+},
+{
+  "model": "holidays_app.holiday",
+  "pk": 33,
+  "fields": {
+    "user": 15,
+    "city": 22,
+    "date": "12/2016",
+    "duration": "20 days"
+  }
+},
+{
+  "model": "holidays_app.holiday",
+  "pk": 34,
+  "fields": {
+    "user": 15,
+    "city": 26,
+    "date": "07/2022",
+    "duration": "4 days"
+  }
+},
+{
+  "model": "holidays_app.holiday",
+  "pk": 35,
+  "fields": {
+    "user": 15,
+    "city": 29,
+    "date": "06/2009",
+    "duration": "3 days"
+  }
+},
+{
+  "model": "holidays_app.holiday",
+  "pk": 36,
+  "fields": {
+    "user": 11,
+    "city": 20,
+    "date": "04/2022",
+    "duration": "3 days"
+  }
+},
+{
+  "model": "holidays_app.holiday",
+  "pk": 37,
+  "fields": {
+    "user": 11,
+    "city": 23,
+    "date": "07/2020",
+    "duration": "9 days"
+  }
+},
+{
+  "model": "holidays_app.holiday",
+  "pk": 38,
+  "fields": {
+    "user": 11,
+    "city": 28,
+    "date": "06/2021",
+    "duration": "5 days"
+  }
+},
+{
+  "model": "holidays_app.holiday",
+  "pk": 39,
+  "fields": {
+    "user": 11,
+    "city": 30,
+    "date": "11/2021",
+    "duration": "2 days"
+  }
+},
+{
+  "model": "holidays_app.holiday",
+  "pk": 40,
+  "fields": {
+    "user": 7,
+    "city": 17,
+    "date": "07/2020",
+    "duration": "4 days"
+  }
 }
 ]
