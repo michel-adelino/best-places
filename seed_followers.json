@@ -1,0 +1,66 @@
+[
+{
+  "model": "followers_app.follower",
+  "pk": 3,
+  "fields": {
+    "user": 1,
+    "follower": 2
+  }
+},
+{
+  "model": "followers_app.follower",
+  "pk": 5,
+  "fields": {
+    "user": 1,
+    "follower": 3
+  }
+},
+{
+  "model": "followers_app.follower",
+  "pk": 6,
+  "fields": {
+    "user": 2,
+    "follower": 1
+  }
+},
+{
+  "model": "followers_app.follower",
+  "pk": 7,
+  "fields": {
+    "user": 3,
+    "follower": 1
+  }
+},
+{
+  "model": "followers_app.follower",
+  "pk": 8,
+  "fields": {
+    "user": 4,
+    "follower": 3
+  }
+},
+{
+  "model": "followers_app.follower",
+  "pk": 9,
+  "fields": {
+    "user": 10,
+    "follower": 3
+  }
+},
+{
+  "model": "followers_app.follower",
+  "pk": 10,
+  "fields": {
+    "user": 5,
+    "follower": 3
+  }
+},
+{
+  "model": "followers_app.follower",
+  "pk": 11,
+  "fields": {
+    "user": 3,
+    "follower": 1
+  }
+}
+]

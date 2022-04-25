@@ -1,0 +1,93 @@
+[
+{
+  "model": "reviews_app.review",
+  "pk": 1,
+  "fields": {
+    "text": "Fantastic!!!!!!",
+    "user": 1,
+    "city": 9,
+    "created_date": "2022-04-20",
+    "rating_food": 3,
+    "rating_weather": 5,
+    "rating_culture": 4
+  }
+},
+{
+  "model": "reviews_app.review",
+  "pk": 2,
+  "fields": {
+    "text": "So amazing!!!!!",
+    "user": 1,
+    "city": 7,
+    "created_date": "2022-04-20",
+    "rating_food": 4,
+    "rating_weather": 2,
+    "rating_culture": 4
+  }
+},
+{
+  "model": "reviews_app.review",
+  "pk": 3,
+  "fields": {
+    "text": "A wonderful visit every season!",
+    "user": 3,
+    "city": 12,
+    "created_date": "2022-04-23",
+    "rating_food": 4,
+    "rating_weather": 2,
+    "rating_culture": 5
+  }
+},
+{
+  "model": "reviews_app.review",
+  "pk": 4,
+  "fields": {
+    "text": "Love the kebabs!!!!!!",
+    "user": 4,
+    "city": 12,
+    "created_date": "2022-04-23",
+    "rating_food": 5,
+    "rating_weather": 5,
+    "rating_culture": 4
+  }
+},
+{
+  "model": "reviews_app.review",
+  "pk": 5,
+  "fields": {
+    "text": "Too cold for my liking",
+    "user": 13,
+    "city": 12,
+    "created_date": "2022-04-24",
+    "rating_food": 5,
+    "rating_weather": 1,
+    "rating_culture": 4
+  }
+},
+{
+  "model": "reviews_app.review",
+  "pk": 6,
+  "fields": {
+    "text": "Excellent place to visit, full of culture and wonderful people, although not for the faint-hearted... very chaotic in the centre!!!",
+    "user": 1,
+    "city": 1,
+    "created_date": "2022-04-25",
+    "rating_food": 5,
+    "rating_weather": 5,
+    "rating_culture": 4
+  }
+},
+{
+  "model": "reviews_app.review",
+  "pk": 8,
+  "fields": {
+    "text": "Meh, so-so. But hey - worth a visit for those who haven't been!",
+    "user": 1,
+    "city": 12,
+    "created_date": "2022-04-25",
+    "rating_food": 3,
+    "rating_weather": 2,
+    "rating_culture": 4
+  }
+}
+]
