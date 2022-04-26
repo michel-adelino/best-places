@@ -9,6 +9,7 @@ jwt_auth_app/__pycache__/
 holistars/__pycache__/
 
 .DS_Store
+.vscode
 
 # C extensions
 *.so

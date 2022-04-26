@@ -9,8 +9,8 @@ from rest_framework.views import APIView
 from rest_framework.exceptions import NotFound
 from .models import City
 from .serializers import CitySerializer, PopulatedCitySerializer
-from scrape_searches import search_lonely_planet
-from scrape_cities import scrape_cities
+from data.scrape_searches import search_lonely_planet
+from data.scrape_cities import scrape_cities
 import sys
 sys.path.append("..")
 
