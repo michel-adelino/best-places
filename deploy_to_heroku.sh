@@ -6,8 +6,8 @@ heroku run python manage.py makemigrations
 heroku run python manage.py migrate
 
 # Re-seed data
-heroku run python manage.py loaddata seed_users.json
-heroku run python manage.py loaddata seed_cities.json
-heroku run python manage.py loaddata seed_holidays.json
-heroku run python manage.py loaddata seed_reviews.json
-heroku run python manage.py loaddata seed_followers.json
+heroku run python manage.py loaddata data/seed_users.json
+heroku run python manage.py loaddata data/seed_cities.json
+heroku run python manage.py loaddata data/seed_holidays.json
+heroku run python manage.py loaddata data/seed_reviews.json
+heroku run python manage.py loaddata data/seed_followers.json
