@@ -4,7 +4,9 @@ from bs4 import BeautifulSoup
 
 
 def search_lonely_planet(city_name, country_name):
-    """ This function takes POST data when a new destination is added"""
+    """ This function takes POST `/scrape/search/` data when a new 
+        destination is searched, and returns a valid Lonely Planet URL.
+    """
 
     city_name = unidecode(city_name.lower())
     country_name = unidecode(country_name.lower())
