@@ -8,48 +8,41 @@ This project was created by [Emily Daykin](https://github.com/emilydaykin) and m
 ## Application Walkthrough
 
 ### Home Page (Unauthenticated = Welcome Page; Authenticated = News Feed)
-
 <p align="center">
-  <img src="./assets/readme/home_welcome.gif" width="45%"  />
-  <img src="./assets/readme/home_feed.gif" width="44.5%"  />
+  <img src="./src/assets/readme/home_welcome.gif" width="45%"  />
+  <img src="./src/assets/readme/home_feed.gif" width="44.5%"  />
 </p>
 
 ### About, Login & Register Pages
-
 <p align="center">
-  <img src="./assets/readme/about.gif" width="45%"  />
-  <img src="./assets/readme/login.png" width="18%"  />
-  <img src="./assets/readme/register.gif" width="18.5%"  />
+  <img src="./src/assets/readme/about.gif" width="45%"  />
+  <img src="./src/assets/readme/login.png" width="18%"  />
+  <img src="./src/assets/readme/register.gif" width="18.5%"  />
 </p>
 
 ### Destinations
-
 <p align="center">
-  <img src="./assets/readme/destinations.gif" width="90%"  />
+  <img src="./src/assets/readme/destinations.gif" width="90%"  />
 </p>
 
 ### Personal Profile Page
-
 <p align="center">
-  <img src="./assets/readme/profile.gif" width="90%"  />
+  <img src="./src/assets/readme/profile.gif" width="90%"  />
 </p>
 
 ### Single City
-
 <p align="center">
-  <img src="./assets/readme/single_city.gif" width="90%"  />
+  <img src="./src/assets/readme/single_city.gif" width="90%"  />
 </p>
 
 ### Dynamically Scrape Holiday Destination
-
 <p align="center">
-  <img src="./assets/readme/scraping.gif" width="90%"  />
+  <img src="./src/assets/readme/scraping.gif" width="90%"  />
 </p>
 
 ## Tech Stack
 
 ### Front End
-
 - React
 - Redux
 - API Handling: Axios
@@ -57,14 +50,12 @@ This project was created by [Emily Daykin](https://github.com/emilydaykin) and m
 - React-Router-Dom
 
 ### Back End
-
 - Server: Django & Django Rest Framework
 - Database: PostgreSQL
 - Authentication: JSON Web Token (pyJWT)
 - Scraping: Python & Beautiful Soup
 
 ### Collaboration & Development
-
 - Git, GitHub
 - Trello (project management)
 - Postman (API testing)
@@ -75,7 +66,6 @@ This project was created by [Emily Daykin](https://github.com/emilydaykin) and m
   - Back End: Heroku
 
 ## Features
-
 - Display of all destinations, and routing to an individual city page with descriptions, top attractions, reviews and travellers
 - Real time searching through all destinations by city, country, description or top attractions
 - Average rating (over food, weather and culture categories) of each destination shown (created by a python property decorator in the Django model)
@@ -89,7 +79,6 @@ This project was created by [Emily Daykin](https://github.com/emilydaykin) and m
   - Follow other travellers
 
 ## Installation
-
 - Run the [deployed application](https://holistars.netlify.app)!
   - Feel free to register and then use your own login credentials, or try a demo one using:
     - Username: `ana@user.com`
@@ -101,24 +90,21 @@ This project was created by [Emily Daykin](https://github.com/emilydaykin) and m
 ## Planning & Wireframing:
 
 ### Whiteboarding (Miro):
-
 <p align="center">
-  <img src="./assets/readme/miro_board.png" width="95%"  />
+  <img src="./src/assets/readme/miro_board.png" width="95%"  />
 </p>
 
 ### Entity Relationship Diagram (ERD via QuickDBD)
-
 <p align="center">
-  <img src="./assets/readme/db_final.png" width="75%"  />
+  <img src="./src/assets/readme/db_final.png" width="75%"  />
 </p>
 
 ### Task Management (Trello)
-
 <p align="center">
-  <img src="./assets/readme/trello.png" width="90%"  />
+  <img src="./src/assets/readme/trello.png" width="90%"  />
 </p>
 
-We agreed on some conventions, like using one to many relationships only for the database, using the BEM methodology for our CSS classes, the 7-1 folder structure for Sass modules, and the async/await syntax for asynchronous functions (I generally prefer using then/catch), and decided to work on both the backend and the frontend by assigning each features to complete front to back. The work was split as such:
+We agreed on some conventions, like using one to many relationships only for the database, using the BEM methodology for our CSS classes, the 7-1 folder structure for Sass modules, and the async/await syntax for asynchronous functions, and decided to work on both the backend and the frontend by assigning each features to complete front to back. The work was split as such:
 
 #### Author Contributions:
 Emily: Implementing the live scraping search, cities section, holidays sections, and the connections (followings) between users
@@ -128,7 +114,6 @@ Marco: Implementing Redux, authentication, users sections, reviews section and t
 ## Architecture:
 
 ### Front End:
-
 - React Components to compartmentalise code
 - Redux to manage state across the entire application
 - React Hooks for component state management and handling side effects
@@ -136,7 +121,6 @@ Marco: Implementing Redux, authentication, users sections, reviews section and t
 - Single Page Application (`react-router-dom`) using `Link`, `useNavigate`, `useLocation` and `useParams`
 
 ### Back End:
-
 - 5 tables/models in PostgreSQL, only one-to-many relationships
 - All security checks (user access credentials) done in Django in the back end:
   - Email validation
@@ -150,7 +134,6 @@ Marco: Implementing Redux, authentication, users sections, reviews section and t
 ### Front End
 
 #### The Redux Slice for users (Marco)
-
 ```
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
@@ -208,7 +191,6 @@ export default usersSlice.reducer;
 ```
 
 #### Another piece of code that I think is worth mentioning is the Stars component, reused multiple times across the app, and that allows half stars (thanks also to font-awesome): (Marco)
-
 ```
 import React from 'react';
 
@@ -239,8 +221,7 @@ export default Stars;
 
 ```
 
-#### Combining Redux-Toolkit and React useState & useEffect hooks to manage the display of all vs searched cities (Emily)
-
+#### Combining Redux-Toolkit and React useState & useEffect hooks to manage the display of all versus searched cities (Emily)
 ```
 const allCitiesRedux = useSelector(selectAllCities);
 const [cities, setCities] = useState(null);
@@ -274,7 +255,6 @@ const handleSearchChange = (e) => {
 ### Back End
 
 #### The follower-following relationship between users is an intermediary table of 'User Followers' in the database structure (Emily)
-
 ```
 from django.db import models
 from django.contrib.auth import get_user_model
@@ -296,7 +276,6 @@ class Follower(models.Model):
 ```
 
 #### Dynamically scraping Lonely Planet's search results based on users' search input ('city' & 'country') in the app (Emily)
-
 ```
 import requests
 from unidecode import unidecode
@@ -341,8 +320,7 @@ def search_lonely_planet(city_name, country_name):
         return cities_urls_to_scrape
 ```
 
-Since we had to calculate the average of the reviews' ratings for every city, and in turn every review rating is the average of three ratings (food, weather and culture), I used the **`@property` decorator in the Review model**, that allows access to computed values as properties, so that in the frontend we wouldn’t have to use a nested loop (_the horror… the horror…_) in the reducer function that calculates the average rating of the reviews for a city (Marco)
-
+Since we had to calculate the average of the reviews' ratings for every city, and in turn every review rating is the average of three ratings (food, weather and culture), the **`@property` decorator in the Review model** was used that allows access to computed values as properties, so that in the frontend we wouldn’t have to use a nested loop in the reducer function that calculates the average rating of the reviews for a city (Marco)
 ```
 @property
 def avg_rating(self):
@@ -352,26 +330,24 @@ def __str__(self):
     return f'{self.city} by {self.user} average rating: {self.avg_rating}'
 ```
 
-## Bugs, Blockers & Wins
+## Wins, Challenges & Bugs
 
-## Wins
-
-Definitely implementing in a working app what we set out to do at the beginning, namely live scraping search for Emily and Redux for me.
-
-### Blockers
-
-Learning Redux as we went was certainly fatiguing and time consuming, and in hindsight I implemented it somewhat naively, but the benefit of having the main pieces of state (users and cities) immediately available throughout the whole app proved to be immense.
+### Wins & Challenges
+There were a number of challenges in this project that turned into rewarding wins after hours/days of solving them. Being able to implement in a working app what we set out to do at the beginning was definitely a win, namely Redux for Marco and live search scraping for me.
+For me personally, these included:
+- Web scraping Lonely Planet to seed the database, and writing a script that would dynamically scrape Lonely Planet's search results, bug-free, whenever a user searched for a city-country combination. Bypassing 403 responses with headers, and writing robust code to cover varying page responses were great learning experiences and very satisfying.
+- The follower-following model, since it was hard to visiualise initially how to link users to other users within the same table. 
+- Getting react state and redux to work together seamlessly in some components (the destinations display and search filter for example) was a challenge, particularly the judgement calls of which situations required react states on top of redux.
 
 ### Bugs
-
 Not quite a bug as it follows logically from how the React rendering mechanism works, but since we hadn't the time to implement Redux for the holidays feature, when you add a holiday for a user you have to refresh the user profile page in order for it to appear.
 
 ## Future Features + Key Learnings
 
 ### Future Features
-
-What we decided would be stretch goals: making the app fully responsive, implementing dark mode, and adding an instant messaging chat feature.
+Although implemented in the back end server, the front end client doesn't make use of a couple of API functionalities such as updating (same user) & deleting (admin only) a user profile, and updating or deleting a user's own holiday. Further improvements include updating a deleting city reviews, toast notifications when a user has a new follower, form validation, and messaging functionality between users.
 
 ### Key Learnings
+**Marco**: "Besides all the technical features and libraries (live scraping, Redux) that we learnt on the go, working with a like minded and extremely talented developer like Emily was a real pleasure, that made working in a team a fantastic and challenging developing and learning experience."
 
-Besides all the technical features and libraries (live scraping, Redux) that we learnt on the go, working with a like minded and extremely talented developer like Emily was a real pleasure, that made working in a team a fantastic and challenging developing and learning experience.
+**Emily**: "Planning and creating this application as a team was incredibly fun. On top of the technical learnings mentioned, it was great experience to collaborate with and learn from a brilliant developer like Marco in this project. What we achieved together and how we helped unblock each other (thank you Marco!) definitely showed how the whole can be greater than the sum of its parts."
