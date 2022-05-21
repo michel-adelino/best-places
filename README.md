@@ -1,9 +1,9 @@
 # Holistars
 
 A full stack social media app for travellers that lets users browse destinations, read and leave reviews, follow other travellers, and create a timeline of their own holidays.
-This project was created by [Emily Daykin](https://github.com/emilydaykin) and me in the span of around 10 days. For a full list of this app's features, see the [Features](#features) section below.
+This project was created by [Marco Manunta](https://github.com/frozenborder72) and me in the span of around 10 days. For a full list of this app's features, see the [Features](#features) section below.
 
-**This repo contains code for the back end api only; code for the front end client lives [here](https://github.com/frozenborder72/holistars).**
+**This repo contains code for the back end api only; code for the front end client lives [here](https://github.com/emilydaykin/Holistars-Client).**
 
 ## Application Walkthrough
 
