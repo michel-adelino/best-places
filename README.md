@@ -9,35 +9,35 @@ This project was created by [Emily Daykin](https://github.com/emilydaykin) and m
 
 ### Home Page (Unauthenticated = Welcome Page; Authenticated = News Feed)
 <p align="center">
-  <img src="./src/assets/readme/home_welcome.gif" width="45%"  />
-  <img src="./src/assets/readme/home_feed.gif" width="44.5%"  />
+  <img src="./assets/readme/home_welcome.gif" width="45%"  />
+  <img src="./assets/readme/home_feed.gif" width="44.5%"  />
 </p>
 
 ### About, Login & Register Pages
 <p align="center">
-  <img src="./src/assets/readme/about.gif" width="45%"  />
-  <img src="./src/assets/readme/login.png" width="18%"  />
-  <img src="./src/assets/readme/register.gif" width="18.5%"  />
+  <img src="./assets/readme/about.gif" width="45%"  />
+  <img src="./assets/readme/login.png" width="18%"  />
+  <img src="./assets/readme/register.gif" width="18.5%"  />
 </p>
 
 ### Destinations
 <p align="center">
-  <img src="./src/assets/readme/destinations.gif" width="90%"  />
+  <img src="./assets/readme/destinations.gif" width="90%"  />
 </p>
 
 ### Personal Profile Page
 <p align="center">
-  <img src="./src/assets/readme/profile.gif" width="90%"  />
+  <img src="./assets/readme/profile.gif" width="90%"  />
 </p>
 
 ### Single City
 <p align="center">
-  <img src="./src/assets/readme/single_city.gif" width="90%"  />
+  <img src="./assets/readme/single_city.gif" width="90%"  />
 </p>
 
 ### Dynamically Scrape Holiday Destination
 <p align="center">
-  <img src="./src/assets/readme/scraping.gif" width="90%"  />
+  <img src="./assets/readme/scraping.gif" width="90%"  />
 </p>
 
 ## Tech Stack
@@ -91,17 +91,17 @@ This project was created by [Emily Daykin](https://github.com/emilydaykin) and m
 
 ### Whiteboarding (Miro):
 <p align="center">
-  <img src="./src/assets/readme/miro_board.png" width="95%"  />
+  <img src="./assets/readme/miro_board.png" width="95%"  />
 </p>
 
 ### Entity Relationship Diagram (ERD via QuickDBD)
 <p align="center">
-  <img src="./src/assets/readme/db_final.png" width="75%"  />
+  <img src="./assets/readme/db_final.png" width="75%"  />
 </p>
 
 ### Task Management (Trello)
 <p align="center">
-  <img src="./src/assets/readme/trello.png" width="90%"  />
+  <img src="./assets/readme/trello.png" width="90%"  />
 </p>
 
 We agreed on some conventions, like using one to many relationships only for the database, using the BEM methodology for our CSS classes, the 7-1 folder structure for Sass modules, and the async/await syntax for asynchronous functions, and decided to work on both the backend and the frontend by assigning each features to complete front to back. The work was split as such:
