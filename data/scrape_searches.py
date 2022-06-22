@@ -7,7 +7,7 @@ def search_lonely_planet(city_name, country_name):
     """ This function takes POST `/scrape/search/` data when a new 
         destination is searched, and returns a valid Lonely Planet URL.
     """
-
+    print('searching.....')
     city_name = unidecode(city_name.lower())
     country_name = unidecode(country_name.lower())
 
@@ -28,7 +28,8 @@ def search_lonely_planet(city_name, country_name):
     soup = BeautifulSoup(page.content, 'html.parser')
 
     search_results = soup.find_all(
-        'a', class_='jsx-1866906973 ListItemTitleLink')
+        # 'a', class_='jsx-1866906973 ListItemTitleLink')  # april 2022
+        'a', class_='text-sm md:text-xl font-semibold text-link line-clamp-1')  # june 2022
     if len(search_results) == 0:
         return ''
     else:
