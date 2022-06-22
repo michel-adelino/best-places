@@ -50,7 +50,8 @@ def scrape_cities(urls=URLs, seed_data=False):
 
         # Continent & Country:
         location = soup.find_all(
-            'a', class_='link-underline transition-colors ease-out cursor-pointer text-black hover:text-blue')
+            # 'a', class_='link-underline transition-colors ease-out cursor-pointer text-black hover:text-blue')  # april 2022
+            'a', class_='transition-colors ease-out cursor-pointer text-black hover:text-blue link-underline')  # june 2022
         continent = location[0].text
         country = location[1].text
         # State or communidad. The US will be populated with states for example, Spain with communidades
