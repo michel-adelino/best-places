@@ -82,7 +82,7 @@ This project was created by [Marco Manunta](https://github.com/frozenborder72) a
 - Run the [deployed application](https://holistars.netlify.app)!
   - Feel free to register and then use your own login credentials, or try a demo one using:
     - Username: `ana@user.com`
-    - Password: `Password1!@`
+    - Password: `Password1!`
 - Or run it locally. (From root level of directory):
   - Server: `pipenv shell` &#8594; `pipenv install` &#8594; `python manage.py migrate` &#8594; `python manage.py loaddata data/seed_<table>.json` (for table in 'users', 'cities', 'holidays', 'reviews', 'followers') &#8594; `python manage.py runserver`
   - Client: `npm install` &#8594; `npm start`
