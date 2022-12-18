@@ -87,7 +87,7 @@ This is a social media platform designed for travelers to discover, review, and 
   - Follow other travellers
 
 ## Installation
-- Run the [deployed application](https://holistars.netlify.app)!
+- Run the application!
   - Feel free to register and then use your own login credentials, or try a demo one using:
     - Username: `ana@user.com`
     - Password: `Password1!`
