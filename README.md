@@ -1,9 +1,17 @@
-# Holistars
+## Overview
 
-A full stack social media app for travellers that lets users browse destinations, read and leave reviews, follow other travellers, and create a timeline of their own holidays.
-This project was created by [Marco Manunta](https://github.com/frozenborder72) and me in the span of around 10 days. For a full list of this app's features, see the [Features](#features) section below.
+This is a social media platform designed for travelers to discover, review, and share their holiday experiences. The app features **dynamically scraped destination data** from Lonely Planet, allowing users to explore comprehensive information about cities worldwide including descriptions, top attractions, and traveler reviews.
 
-**This repo contains code for the back end api only; code for the front end client lives [here](https://github.com/emilydaykin/Holistars-Client).**
+### Key Features
+
+- **🌍 Scraped Destination Data**: All destination information (descriptions, attractions, images) is dynamically scraped from Lonely Planet, ensuring up-to-date and comprehensive travel content
+- **🔍 Real-time Search**: Search destinations by city, country, description, or attractions
+- **⭐ Rating System**: Multi-category ratings (food, weather, culture) with average calculations
+- **👥 Social Features**: Follow other travelers, view personalized news feeds, and browse user profiles
+- **📅 Holiday Timeline**: Create and manage a personal timeline of your holidays
+- **✍️ Reviews & Ratings**: Leave detailed reviews and rate destinations across multiple categories
+- **🔐 Secure Authentication**: JWT-based authentication with password encryption and secure session management
+
 
 ## Application Walkthrough
 
@@ -106,11 +114,6 @@ This project was created by [Marco Manunta](https://github.com/frozenborder72) a
 
 We agreed on some conventions, like using one to many relationships only for the database, using the BEM methodology for our CSS classes, the 7-1 folder structure for Sass modules, and the async/await syntax for asynchronous functions, and decided to work on both the backend and the frontend by assigning each features to complete front to back. The work was split as such:
 
-#### Author Contributions:
-Emily: Implementing the live scraping search, cities section, holidays sections, and the connections (followings) between users
-
-Marco: Implementing Redux, authentication, users sections, reviews section and the stars component
-
 ## Architecture:
 
 ### Front End:
@@ -133,7 +136,7 @@ Marco: Implementing Redux, authentication, users sections, reviews section and t
 
 ### Front End
 
-#### The Redux Slice for users (Marco)
+#### The Redux Slice for users
 ```
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
@@ -190,7 +193,7 @@ export default usersSlice.reducer;
 
 ```
 
-#### Another piece of code that I think is worth mentioning is the Stars component, reused multiple times across the app, and that allows half stars (thanks also to font-awesome): (Marco)
+#### Another piece of code that I think is worth mentioning is the Stars component, reused multiple times across the app, and that allows half stars (thanks also to font-awesome):
 ```
 import React from 'react';
 
@@ -221,7 +224,7 @@ export default Stars;
 
 ```
 
-#### Combining Redux-Toolkit and React useState & useEffect hooks to manage the display of all versus searched cities (Emily)
+#### Combining Redux-Toolkit and React useState & useEffect hooks to manage the display of all versus searched cities
 ```
 const allCitiesRedux = useSelector(selectAllCities);
 const [cities, setCities] = useState(null);
@@ -254,7 +257,7 @@ const handleSearchChange = (e) => {
 
 ### Back End
 
-#### The follower-following relationship between users is an intermediary table of 'User Followers' in the database structure (Emily)
+#### The follower-following relationship between users is an intermediary table of 'User Followers' in the database structure
 ```
 from django.db import models
 from django.contrib.auth import get_user_model
@@ -275,7 +278,7 @@ class Follower(models.Model):
         return f'{self.follower} is following {self.user}'
 ```
 
-#### Dynamically scraping Lonely Planet's search results based on users' search input ('city' & 'country') in the app (Emily)
+#### Dynamically scraping Lonely Planet's search results based on users' search input ('city' & 'country') in the app
 ```
 import requests
 from unidecode import unidecode
@@ -320,7 +323,7 @@ def search_lonely_planet(city_name, country_name):
         return cities_urls_to_scrape
 ```
 
-Since we had to calculate the average of the reviews' ratings for every city, and in turn every review rating is the average of three ratings (food, weather and culture), the **`@property` decorator in the Review model** was used that allows access to computed values as properties, so that in the frontend we wouldn’t have to use a nested loop in the reducer function that calculates the average rating of the reviews for a city (Marco)
+Since we had to calculate the average of the reviews' ratings for every city, and in turn every review rating is the average of three ratings (food, weather and culture), the **`@property` decorator in the Review model** was used that allows access to computed values as properties, so that in the frontend we wouldn’t have to use a nested loop in the reducer function that calculates the average rating of the reviews for a city
 ```
 @property
 def avg_rating(self):
@@ -329,25 +332,3 @@ def avg_rating(self):
 def __str__(self):
     return f'{self.city} by {self.user} average rating: {self.avg_rating}'
 ```
-
-## Wins, Challenges & Bugs
-
-### Wins & Challenges
-There were a number of challenges in this project that turned into rewarding wins after hours/days of solving them. Being able to implement in a working app what we set out to do at the beginning was definitely a win, namely Redux for Marco and live search scraping for me.
-For me personally, these included:
-- Web scraping Lonely Planet to seed the database, and writing a script that would dynamically scrape Lonely Planet's search results, bug-free, whenever a user searched for a city-country combination. Bypassing 403 responses with headers, and writing robust code to cover varying page responses were great learning experiences and very satisfying.
-- The follower-following model, since it was hard to visiualise initially how to link users to other users within the same table. 
-- Getting react state and redux to work together seamlessly in some components (the destinations display and search filter for example) was a challenge, particularly the judgement calls of which situations required react states on top of redux.
-
-### Bugs
-Not quite a bug as it follows logically from how the React rendering mechanism works, but since we hadn't the time to implement Redux for the holidays feature, when you add a holiday for a user you have to refresh the user profile page in order for it to appear.
-
-## Future Features + Key Learnings
-
-### Future Features
-Although implemented in the back end server, the front end client doesn't make use of a couple of API functionalities such as updating (same user) & deleting (admin only) a user profile, and updating or deleting a user's own holiday. Further improvements include updating a deleting city reviews, toast notifications when a user has a new follower, form validation, and messaging functionality between users.
-
-### Key Learnings
-**Marco**: "Besides all the technical features and libraries (live scraping, Redux) that we learnt on the go, working with a like minded and extremely talented developer like Emily was a real pleasure, that made working in a team a fantastic and challenging developing and learning experience."
-
-**Emily**: "Planning and creating this application as a team was incredibly fun. On top of the technical learnings mentioned, it was great experience to collaborate with and learn from a brilliant developer like Marco in this project. What we achieved together and how we helped unblock each other (thank you Marco!) definitely showed how the whole can be greater than the sum of its parts."
